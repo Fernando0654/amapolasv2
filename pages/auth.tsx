@@ -31,7 +31,7 @@ const AuthPage = () => {
                     isNew: res.additionalUserInfo.isNewUser,
                     correo: res.user.email
                 }));
-                if(res.additionalUserInfo.isNewUser) {
+                if (res.additionalUserInfo.isNewUser) {
                     axios.post(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/user/` + res.user.email, {
                         nombre: res.user.displayName,
                         correo: res.user.email,
@@ -40,10 +40,10 @@ const AuthPage = () => {
                         img: res.user.photoURL,
                         API: true
                     })
-                    .then((res) => {
-                        console.log(res)
-                        toast.info("Registrado exitosamente")
-                    });
+                        .then((res) => {
+                            console.log(res)
+                            toast.info("Registrado exitosamente")
+                        });
                 }
             });
     }
@@ -51,7 +51,6 @@ const AuthPage = () => {
     const registerWithUserAndPassword = () => {
         verifyIfItsNewUser(Email);
     }
-
 
     const verifyIfItsNewUser = (email) => {
         axios.get(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/user/` + email)
@@ -89,7 +88,7 @@ const AuthPage = () => {
 
 export const getServerSideProps = withAuthUserTokenSSR({
     appPageURL: "/home",
-})(({ req, res }):any => {
+})(({ req, res }): any => {
     res.setHeader(
         'Cache-Control',
         'public, s-maxage=10, stale-while-revalidate=59'

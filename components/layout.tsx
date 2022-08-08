@@ -1,6 +1,7 @@
 import { NextPage } from "next"
 import Head from "next/head"
 import { ToastContainer, toast } from 'react-toastify';
+import Menu from "./menu";
 
 const Layout: NextPage = (props) => (
     <div>
@@ -15,7 +16,6 @@ const Layout: NextPage = (props) => (
         </Head>
         <ToastContainer autoClose={1000} />
         <main>
-
             {props.children}
         </main>
     </div>
