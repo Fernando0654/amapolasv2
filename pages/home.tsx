@@ -14,6 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useEffect, useState } from 'react';
 import Glide from '@glidejs/glide'
 import Menu from '../components/menu'
+import Link from 'next/link'
 
 const Home = () => {
   const [PathImg, setPathImg] = useState(null)
@@ -93,9 +94,11 @@ const Home = () => {
               </ul>
             </div>
           </div>
+          <Link href="/services">
           <button className="home_btn">
             ¡Quiero agendar!
           </button>
+          </Link>
           <Menu />
         </div>
       </Layout>
