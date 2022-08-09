@@ -1,14 +1,9 @@
 import { combineReducers } from "redux"
-import { collectionReducer } from "./collections";
-import { musicReducer } from "./musicReducer";
-import { payment } from "./payment";
-import { singleTrack } from "./singleTrack";
-import { userInformation } from "./userInformation";
+import { priceReducer } from "./priceReducer";
+import { serviceReducer } from "./serviceReducer";
+
 
 export default combineReducers({
-    list: musicReducer,
-    id: singleTrack,
-    user: userInformation,
-    total: payment,
-    collections: collectionReducer
+    precio: priceReducer,
+    servicio: serviceReducer
 });

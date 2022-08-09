@@ -1,12 +1,12 @@
 import * as types from "../types";
 
-export const userInformation = (user = {}, action: any) => {
+export const priceReducer = (price = null, action: any) => {
     switch (action.type) {
-        case types.SAVE_USER_INFO:
+        case types.SAVE_PRICE:
             return action.payload
-        case types.GET_USER_INFO:
+        case types.GET_PRICE:
             return action.payload
         default:
-            return user;
+            return price;
     }
 }

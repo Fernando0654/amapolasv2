@@ -479,6 +479,9 @@ button:active {
     &:active {
       transform: scale(0.9);
     }
+    &.active > img {
+      background-color: rgb(240, 116, 116);
+    }
     img {
       width: 100%;
       max-width: 20px;
@@ -559,5 +562,65 @@ button:active {
       cursor: not-allowed;
       transform: scale(0.9);
     }
+  }
+}
+
+// Details 
+
+.detalles {
+  display: block;
+  width: 95%;
+  margin: auto;
+  .title_back {
+    display: flex;
+    width: 95%;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    span {
+      margin: auto;
+    }
+  }
+  img {
+    display: block;
+    width: 85%;
+    margin: auto;
+  }
+  .badge_pink {
+    display: block;
+    width: 86%;
+    background-color: #e1b1af;
+    margin: auto;
+    font-size: 0.8rem;
+    color: #fff;
+    padding: 0.5em;
+    border-radius: 150px;
+    margin-top: 2em;
+    border: 1px solid #ad423c;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.26);
+    p {
+      display: flex;
+      gap: 2em;
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      padding: 1em;
+      font-weight: bold;
+      span {
+        display: block;
+        width: 90%;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  p {
+    display: block;
+    width: 86%;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 }
