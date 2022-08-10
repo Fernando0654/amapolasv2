@@ -41,7 +41,7 @@ const Agenda = () => {
     }, []);
 
     const getCitasCliente = async (email: string) => {
-        await axios.get(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/citas/${email}`)
+        await axios(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/citas/${email}`)
             .then((res) => {
                 setStatusState(res.data.data)
                 dispatch(saveCitas(res.data.data))
