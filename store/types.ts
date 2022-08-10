@@ -6,3 +6,4 @@ export const SAVE_PRICE = "SAVE_PRICE";
 export const SAVE_SERVICE = "SAVE_PRICE";
 export const SAVE_CITA = "SAVE_CITA";
 export const GET_CITA = "GET_CITA";
+export const SAVE_CITAS = "SAVE_CITAS"

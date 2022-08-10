@@ -6,6 +6,8 @@ export const citaReducer = (cita = {}, action: any) => {
             return action.payload
         case types.GET_CITA:
             return action.payload
+        case types.SAVE_CITAS:
+            return action.payload;
         default:
             return cita;
     }

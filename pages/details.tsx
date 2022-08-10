@@ -18,6 +18,7 @@ const Services = () => {
     const serviciosImg = ["bn_corte.png", "bn_mani.png", "bn_maquillaje.png", "bn_tratamiento.png", "bn_estilizado.png"];
     const serviciosName = ["Cortes", "Manicura y/o Pedicura", "Maquillaje", "Tratamientos", "Estilizado"];
     const especialista = ["sp_corte.png", "sp_mani.png", "sp_maquillaje.png", "sp_tratamiento.png", "sp_estilizado.png"]
+    const especialistaName = ["Kim Garduño", "Alejandra Íñiguez", "Valeria Muñoz", "Manuel Oliva", "Silvia Galván"]
 
     const precio = useSelector((state: any) => state.precio);
     const servicio = useSelector((state: any) => state.servicio);
@@ -34,7 +35,8 @@ const Services = () => {
         servicio: null,
         precio: null,
         fecha: null,
-        hora: null
+        hora: null,
+        especialista: null
     }
 
     useEffect(() => {
@@ -48,7 +50,8 @@ const Services = () => {
             ...Cita,
             cliente: user.email,
             servicio: serviciosName[servicio],
-            precio: preciosRango[precio]
+            precio: preciosRango[precio],
+            especialista: especialistaName[servicio]
         }
         if (Cita.cliente === null ||
             Cita.servicio === null ||
@@ -59,7 +62,7 @@ const Services = () => {
             return
         }
         loadingBar();
-        // dispatch(saveCitaR(Cita));
+        dispatch(saveCitaR(Cita));
         setAgendando(true);
     }
 

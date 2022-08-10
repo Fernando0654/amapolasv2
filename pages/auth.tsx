@@ -54,7 +54,6 @@ const AuthPage = () => {
         axios.get(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/user/` + email)
             .then((res) => {
                 console.log(res);
-
             });
     }
 

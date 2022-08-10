@@ -14,7 +14,7 @@ const nextConfig = withPWA({
     disable: process.env.NODE_ENV === 'development'
   },
   images: {
-    domains: ['lh3.googleusercontent.com', 'i.scdn.co', 'tunecloud.vercel.app'],
+    domains: ['https://lh3.googleusercontent.com/a-', 'data.whicdn.com', 'i.scdn.co', 'tunecloud.vercel.app'],
     formats: ['image/avif', 'image/webp'],
   },
 })

@@ -40,6 +40,8 @@ const handler = async (req, res) => {
                 } else {
                     newUser.password = await newUser.encryptPassword(password);
                 }
+                const userAlreadyExists = await User.find({correo: correo});
+                if(userAlreadyExists) return res.status(400).json({ message: "Correo ya registrado" });
                 await newUser.save();
                 return res.status(200).json({ message: "Usuario registrado" });
             } catch (error) {

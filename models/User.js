@@ -7,7 +7,7 @@ const userSchema = new Schema({
     email: { type: String, required: true },
     password: { type: String, required: true },
     phone: { type: String, required: true },
-    img: { type: String, required: true },
+    img: { type: String, required: false, default: "https://data.whicdn.com/images/352835841/original.jpg" },
     rol: { type: String, required: true },
     API: { type: Boolean, required: true, default: false }
 });

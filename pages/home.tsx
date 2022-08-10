@@ -2,10 +2,8 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Navbar from "../components/navbar"
 // Firebase
-import firebase from "firebase"
 import {
   AuthAction,
-  useAuthUser,
   withAuthUser,
   withAuthUserTokenSSR,
 } from "next-firebase-auth"

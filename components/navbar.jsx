@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="wrapper" onClick={() => setShowMenu(!ShowMenu)} style={ShowMenu ? {display: "block"} : {display: "none"}}></div>
         <div className="sidebar_body" style={ShowMenu ? {left: "0%"} : {left: "-100%"}}>
             <div className="pink_area">
-                <img src={user.photoURL} alt="" />
+                <img src={user.photoURL || "https://data.whicdn.com/images/352835841/original.jpg"} alt="" />
                 <h4>{user.displayName}</h4>
             </div>
             <img src="/assets/img/Hi_Bye.gif" alt="" className="anima" style={IsLogginOut ? { right: "0%" } : {right: "-100%"}} />

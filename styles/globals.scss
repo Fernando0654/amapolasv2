@@ -19,7 +19,8 @@ body {
   margin: 0;
 }
 
-.home, .servicios {
+.home,
+.servicios {
   animation: appear 250ms ease-in-out;
 }
 
@@ -27,6 +28,7 @@ body {
   from {
     transform: translateX(-100%);
   }
+
   to {
     transform: translateX(0%);
   }
@@ -41,6 +43,7 @@ body {
   position: relative;
   transition: 1s ease-in;
   min-height: 100vh;
+
   a {
     display: flex;
     align-items: center;
@@ -57,6 +60,7 @@ body {
   display: block;
   width: 95%;
   margin: 1em;
+
   .glide__slide {
     h1 {
       display: block;
@@ -68,12 +72,13 @@ body {
       color: #2c2c2e;
       text-align: center;
     }
+
     img {
       display: block;
       width: 65%;
       margin: auto;
     }
-  } 
+  }
 
   .glide__bullets {
     display: flex;
@@ -87,6 +92,7 @@ body {
     position: inherit;
     bottom: inherit;
     left: inherit;
+
     .glide__bullet {
       background-color: #b1b1bd9f;
 
@@ -97,7 +103,9 @@ body {
   }
 }
 
-a, p, span {
+a,
+p,
+span {
   font-family: 'Inter', sans-serif;
 }
 
@@ -113,8 +121,10 @@ a, p, span {
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
+
   &.signup {
     background-image: url("/bg_signup.png");
+
     .container {
       p {
         display: block;
@@ -122,11 +132,13 @@ a, p, span {
         width: 100%;
         margin: 0;
       }
+
       span {
         margin-top: 1.5em;
         margin-bottom: 2em;
         font-weight: bold;
       }
+
       button {
         display: block;
         width: 100%;
@@ -144,6 +156,7 @@ a, p, span {
           transform: scale(0.9);
         }
       }
+
       .btn_pink {
         display: flex;
       }
@@ -218,6 +231,7 @@ a, p, span {
         }
       }
     }
+
     a {
       color: #000;
     }
@@ -274,33 +288,41 @@ button:active {
   margin: auto;
   min-height: 100vh;
   background-image: url("/Fondo_Menu.jpg");
+
   h2 {
     color: #6d6d7c;
   }
-  h1, h2 {
+
+  h1,
+  h2 {
     display: block;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     margin-top: 2em;
     width: 95%;
+
     span {
       display: block;
       font-weight: 500;
       font-size: 1rem;
     }
   }
+
   .options {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 1em;
+
     .btn_opt {
       display: block;
       width: 15%;
+
       &:active {
         transform: scale(0.9);
       }
+
       img {
         width: 100%;
         max-width: 30px;
@@ -310,6 +332,7 @@ button:active {
         padding: 1em;
         border-radius: 100%;
       }
+
       span {
         display: block;
         width: 100%;
@@ -319,12 +342,14 @@ button:active {
       }
     }
   }
+
   .glide.specialists {
     .glide__slides {
       overflow: inherit;
       padding-top: 0.5em;
       padding-bottom: 0.5em;
     }
+
     .glide__slide {
       img {
         display: block;
@@ -332,8 +357,9 @@ button:active {
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.527);
       }
-    } 
+    }
   }
+
   .home_btn {
     display: block;
     padding: 1em;
@@ -359,6 +385,7 @@ button:active {
   background-color: #f2eadf;
   padding: 0.2em;
   border-radius: 5px;
+
   &:active {
     transform: scale(0.9);
   }
@@ -374,6 +401,7 @@ button:active {
   z-index: 2000;
   transition: 500ms ease-in-out;
   overflow: hidden;
+
   .pink_area {
     display: flex;
     flex-direction: column;
@@ -384,10 +412,12 @@ button:active {
     font-family: 'Inter', sans-serif;
     background-color: #e1b1af;
     color: #fff;
+
     img {
       border-radius: 100%;
     }
   }
+
   .anima {
     position: absolute;
     top: 50%;
@@ -395,6 +425,7 @@ button:active {
     width: 100%;
     transition: 500ms ease-in-out;
   }
+
   button {
     position: absolute;
     width: 90%;
@@ -428,12 +459,15 @@ button:active {
   justify-content: center;
   position: fixed;
   bottom: -0.4em;
+  left: 50%;
+  transform: translateX(-50%);
   border: 2px solid #ad423c;
   padding: 0.5em;
   background-color: #d8c2b7;
   gap: 1.3em;
   border-radius: 150px;
   margin-bottom: 2em;
+
   button {
     display: flex;
     align-items: center;
@@ -456,10 +490,11 @@ button:active {
   align-items: center;
   justify-content: center;
   transition: 250ms ease;
+
   img {
     width: 80%;
     border-radius: 10px;
-    
+
   }
 }
 
@@ -473,15 +508,19 @@ button:active {
   gap: 1em;
   width: 95%;
   margin: auto;
+
   .btn_opt {
     display: block;
     width: 15%;
+
     &:active {
       transform: scale(0.9);
     }
-    &.active > img {
+
+    &.active>img {
       background-color: rgb(240, 116, 116);
     }
+
     img {
       width: 100%;
       max-width: 20px;
@@ -491,6 +530,7 @@ button:active {
       padding: 1em;
       border-radius: 100%;
     }
+
     span {
       display: block;
       width: 100%;
@@ -505,21 +545,25 @@ button:active {
   display: block;
   width: 100%;
   margin: auto;
+
   img {
     width: 100%;
   }
+
   .go_back {
     display: flex;
     gap: 0.5em;
     padding: 0.5em;
     width: 95%;
   }
+
   .precios_list {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: auto;
     margin-top: 0.5em;
+
     h1 {
       display: block;
       font-size: 1rem;
@@ -528,6 +572,7 @@ button:active {
       color: rgb(63, 45, 45);
       padding: 1em;
     }
+
     span {
       display: block;
       font-size: 0.8rem;
@@ -535,15 +580,18 @@ button:active {
       text-align: center;
       border-top: 1px solid rgb(219, 206, 206);
       padding: 0.7em;
+
       &.active {
         font-weight: bold;
         font-size: 0.9rem;
       }
     }
+
     &:nth-child(2) {
       border: none;
     }
   }
+
   button {
     display: block;
     width: 90%;
@@ -557,6 +605,7 @@ button:active {
     margin: auto;
     margin-top: 2em;
     margin-bottom: 2em;
+
     &:disabled {
       color: gray;
       cursor: not-allowed;
@@ -567,10 +616,8 @@ button:active {
 
 // Details 
 
-.detalles {
-  display: block;
-  width: 95%;
-  margin: auto;
+.detalles,
+.agenda {
   .title_back {
     display: flex;
     width: 95%;
@@ -580,11 +627,14 @@ button:active {
     margin: auto;
     margin-top: 1em;
     margin-bottom: 1em;
+
     span {
       display: block;
       margin: auto;
       width: 95%;
+      font-weight: bold;
     }
+
     .no_btn {
       display: block;
       width: 2%;
@@ -592,13 +642,22 @@ button:active {
       margin: auto;
       background-color: transparent;
       color: #000;
+      border: none;
     }
   }
+}
+
+.detalles {
+  display: block;
+  width: 95%;
+  margin: auto;
+
   img {
     display: block;
     width: 85%;
     margin: auto;
   }
+
   .badge_pink {
     display: flex;
     align-items: center;
@@ -613,6 +672,7 @@ button:active {
     margin-top: 2em;
     border: 1px solid #ad423c;
     box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.26);
+
     p {
       display: flex;
       gap: 2em;
@@ -621,6 +681,7 @@ button:active {
       text-align: center;
       padding: 1em;
       font-weight: bold;
+
       span {
         display: flex;
         align-items: center;
@@ -629,6 +690,7 @@ button:active {
       }
     }
   }
+
   p {
     display: block;
     width: 86%;
@@ -636,6 +698,7 @@ button:active {
     margin-top: 1em;
     margin-bottom: 1em;
   }
+
   .date_form {
     .date_da {
       display: flex;
@@ -650,7 +713,9 @@ button:active {
       gap: 4em;
       background-color: #e1b1af;
       border-radius: 10px;
-      input[type="date"], select {
+
+      input[type="date"],
+      select {
         display: block;
         padding: 1em;
         border: none;
@@ -659,15 +724,18 @@ button:active {
         background-color: #e1b1af;
         color: #fff;
         font-family: 'Inter', sans-serif;
+
         &::-webkit-calendar-picker-indicator {
           filter: invert(1);
+        }
       }
-      }
+
       span {
         color: #fff;
       }
     }
   }
+
   .specialist {
     display: block;
     width: 70%;
@@ -675,6 +743,7 @@ button:active {
     margin-top: 2em;
     margin-bottom: 2em;
   }
+
   button {
     display: block;
     width: 90%;
@@ -688,6 +757,7 @@ button:active {
     margin: auto;
     margin-top: 2em;
     margin-bottom: 2em;
+
     &:disabled {
       color: gray;
       cursor: not-allowed;
@@ -710,6 +780,7 @@ a {
   width: 100vw;
   top: 0;
   animation: appear 100ms ease-in-out;
+
   .agendando {
     display: block;
     position: absolute;
@@ -717,6 +788,7 @@ a {
     width: 80%;
     background-color: rgb(219, 207, 207);
     border-radius: 150px;
+
     .bar {
       display: block;
       height: 8px;
@@ -725,6 +797,7 @@ a {
       border-radius: 150px;
     }
   }
+
   p {
     margin-top: 6em;
     font-family: 'Inter', sans-serif;
@@ -744,6 +817,7 @@ a {
   min-width: 100vw;
   flex-direction: column;
   animation: appear 100ms ease-in-out;
+
   .success_icon {
     display: flex;
     align-items: center;
@@ -755,17 +829,20 @@ a {
     font-size: 4rem;
     border-radius: 150px;
   }
+
   h2 {
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 1rem;
   }
+
   p {
     display: block;
     width: 50%;
     text-align: center;
     font-size: 0.8rem;
   }
+
   button {
     position: relative;
     top: 7em;
@@ -779,4 +856,171 @@ a {
     border: none;
     border-radius: 10px;
   }
+}
+
+// Agenda
+
+.agenda {
+  display: block;
+  min-height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+  background-image: url("/Fondo_Agenda.png");
+
+
+  .title_back {
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 1em;
+    margin-top: inherit;
+    padding-top: 1em;
+    .no_btn {
+      padding-left: 1em;
+    }
+  }
+
+  .specialists  {
+    margin: inherit;
+  }
+
+  .glide__slides {
+    padding-bottom: 2em;
+  }
+
+  .header_nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    gap: 0;
+    position: absolute;
+    top: -7vh;
+    left: 50%;
+    transform: translateX(-50%);
+    &.glide__bullets .glide__bullet--active {
+      background-color: rgb(223, 107, 107) !important;
+      color: #fff !important;
+    }
+    button {
+      background-color: #ffffff !important;
+      border: none !important;
+      padding: 0.8em 1.5em;
+      color: #070606;
+      width: inherit;
+      height: inherit;
+      border-radius: inherit;
+      margin: inherit;
+      line-height: inherit;
+
+      &:first-child {
+        border-right: 1px solid rgba(128, 128, 128, 0.158);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      &:last-child {
+        border-left: 1px solid rgba(128, 128, 128, 0.158);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+
+      &.active {
+        background-color: #f0d9d7;
+        color: rgb(255, 255, 255);
+      }
+    }
+
+  }
+
+  .container_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+    .badge_cita {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      padding: 1em;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-top: 1em;
+      box-shadow: 0px 0px 6px gray;
+      .info {
+        display: flex;
+        flex-direction: row;
+        .datos {
+          display: block;
+          width: 80%;
+          font-size: 0.6rem;
+        }
+        .delete {
+          display: flex;
+          width: 20%;
+          align-items: center;
+          justify-content: center;
+          font-size: 1rem;
+          color: rgb(184, 28, 28);
+        }
+      }
+      .success_btn {
+        display: block;
+        width: 100%;
+        font-size: 0.7rem;
+        color: rgb(177, 121, 130);
+        font-weight: bold;
+        font-family: 'Inter', sans-serif;
+        label {
+          display: flex;
+          width: 50%;
+          border-radius: 10px;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(212, 205, 206);
+          color: #fff;
+          padding: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+.no_information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin-top: 0.4em;
+  background-color: rgb(204, 97, 97);
+  text-align: center;
+  padding: 1em;
+  border-radius: 10px;
+  gap: 1em;
+  h1 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: auto !important;
+    color: #fff !important;
+    font-size: 1rem !important;
+  }
+  color: #fff;
+  font-size: 2rem;
+}
+
+.loading {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  align-items: center;
+  justify-content: center;
+  color: rgb(36, 31, 31);
+  width: 60%;
+  margin: auto;
+  margin-top: 4em;
+  font-size: 0.8rem;
 }

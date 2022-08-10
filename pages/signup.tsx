@@ -16,6 +16,7 @@ import Link from "next/link";
 const SignUp = () => {
     const dispatch = useDispatch();
     const [Carga, setCarga] = useState(null);
+    const Router = useRouter();
 
     const registerWithGoogle = () => {
         firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider())
@@ -51,9 +52,11 @@ const SignUp = () => {
             console.log("passwords")
             return;
         }
-        axios.post(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/user/` + Carga.email, Carga)
-            .then((res) => {
-                console.log(res)
+        axios.post(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/user/` + Carga.correo, Carga)
+            .then(() => {
+                Router.push("/auth");
+            }).catch((res) => {
+                toast.error(res.response.data.message)
             })
 
     }
