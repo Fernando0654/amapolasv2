@@ -1,7 +1,6 @@
 import { NextPage } from "next"
 import Head from "next/head"
-import { ToastContainer, toast } from 'react-toastify';
-import Menu from "./menu";
+import { ToastContainer } from 'react-toastify';
 
 const Layout: NextPage = (props) => (
     <div>
@@ -14,7 +13,17 @@ const Layout: NextPage = (props) => (
             <meta name="msapplication-TileColor" content="#da532c" />
             <meta name="theme-color" content="#ffffff" />
         </Head>
-        <ToastContainer autoClose={1000} />
+        <ToastContainer
+                position="bottom-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light" />
         <main>
             {props.children}
         </main>

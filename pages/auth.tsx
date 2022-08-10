@@ -3,8 +3,6 @@ import Head from "next/head"
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import { AuthAction, withAuthUser, withAuthUserTokenSSR } from "next-firebase-auth"
-// Styles
-import { AiOutlineGooglePlus } from "react-icons/ai";
 // Redux
 import { useDispatch } from "react-redux";
 import { saveUser } from "../store/actions/user";

@@ -10,7 +10,7 @@ import "../styles/globals.scss"
 import "@glidejs/glide/src/assets/sass/glide.core.scss";
 // Optional Theme Stylesheet
 import "@glidejs/glide/src/assets/sass/glide.theme.scss";
-
+import 'react-toastify/dist/ReactToastify.css';
 
 initAuth();
 

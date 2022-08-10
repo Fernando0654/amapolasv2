@@ -581,7 +581,17 @@ button:active {
     margin-top: 1em;
     margin-bottom: 1em;
     span {
+      display: block;
       margin: auto;
+      width: 95%;
+    }
+    .no_btn {
+      display: block;
+      width: 2%;
+      padding: 0em;
+      margin: auto;
+      background-color: transparent;
+      color: #000;
     }
   }
   img {
@@ -590,7 +600,9 @@ button:active {
     margin: auto;
   }
   .badge_pink {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 86%;
     background-color: #e1b1af;
     margin: auto;
@@ -610,7 +622,8 @@ button:active {
       padding: 1em;
       font-weight: bold;
       span {
-        display: block;
+        display: flex;
+        align-items: center;
         width: 90%;
         font-size: 0.8rem;
       }
@@ -622,5 +635,148 @@ button:active {
     margin: auto;
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+  .date_form {
+    .date_da {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      width: 86%;
+      margin: auto;
+      padding: 0.6em;
+      margin-top: 1em;
+      gap: 4em;
+      background-color: #e1b1af;
+      border-radius: 10px;
+      input[type="date"], select {
+        display: block;
+        padding: 1em;
+        border: none;
+        appearance: none;
+        outline: none;
+        background-color: #e1b1af;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        &::-webkit-calendar-picker-indicator {
+          filter: invert(1);
+      }
+      }
+      span {
+        color: #fff;
+      }
+    }
+  }
+  .specialist {
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  button {
+    display: block;
+    width: 90%;
+    background-color: #e1b1af;
+    color: #fff;
+    padding: 0.8em;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    &:disabled {
+      color: gray;
+      cursor: not-allowed;
+      transform: scale(0.9);
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.screen_agendando {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: #fff;
+  min-height: 100vh;
+  width: 100vw;
+  top: 0;
+  animation: appear 100ms ease-in-out;
+  .agendando {
+    display: block;
+    position: absolute;
+    height: 8px;
+    width: 80%;
+    background-color: rgb(219, 207, 207);
+    border-radius: 150px;
+    .bar {
+      display: block;
+      height: 8px;
+      background-color: rgb(165, 47, 130);
+      position: relative;
+      border-radius: 150px;
+    }
+  }
+  p {
+    margin-top: 6em;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+}
+
+.agendado_success {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  background-color: #fff;
+  min-height: 100vh;
+  min-width: 100vw;
+  flex-direction: column;
+  animation: appear 100ms ease-in-out;
+  .success_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f7;
+    color: #f0d9d7;
+    width: 40vw;
+    height: 40vw;
+    font-size: 4rem;
+    border-radius: 150px;
+  }
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  p {
+    display: block;
+    width: 50%;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  button {
+    position: relative;
+    top: 7em;
+    display: block;
+    width: 90%;
+    background-color: #e1b1af;
+    color: #fff;
+    padding: 0.8em;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
   }
 }
