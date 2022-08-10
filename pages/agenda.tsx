@@ -40,6 +40,10 @@ const Agenda = () => {
         new Glide(".glide", options).mount();
     }, []);
 
+    useEffect(() => {
+    }, [_Agendadas, _Exitosas, _Canceladas])
+
+
     const getCitasCliente = async (email: string) => {
         await axios(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/citas/${email}`)
             .then((res) => {
@@ -50,7 +54,6 @@ const Agenda = () => {
     }
 
     const setStatusState = (data) => {
-        console.log(data)
         let pendientes = [];
         let exitosas = [];
         let canceladas = [];
@@ -65,6 +68,7 @@ const Agenda = () => {
                 canceladas.push(data[index]);
             }
         })
+        console.log(exitosas)
         setAgendadas(pendientes);
         setExitosas(exitosas);
         setCanceladas(canceladas);
@@ -91,27 +95,22 @@ const Agenda = () => {
                     <div className="glide specialists">
                         <div className="glide__track" data-glide-el="track">
                             <ul className="glide__slides">
-                                {
-                                    Loading ?
-                                        <div className="loading">
-                                            <h1>Cargando...</h1>
-                                        </div> :
-                                        <>
-                                            <li className="glide__slide">
-                                                <Agendadas
-                                                    citas={_Agendadas}
-                                                    updateAgendadas={updateAgendadas}
-                                                    updateExitosas={updateExitosas}
-                                                    updateCanceladas={updateCanceladas} />
-                                            </li>
-                                            <li className="glide__slide">
-                                                <Exitosas citas={_Exitosas} />
-                                            </li>
-                                            <li className="glide__slide">
-                                                <Canceladas citas={_Canceladas} />
-                                            </li>
-                                        </>
-                                }
+                                <>
+                                    <li className="glide__slide">
+                                        <Agendadas
+                                            loading={Loading}
+                                            citas={_Agendadas}
+                                            updateAgendadas={updateAgendadas}
+                                            updateExitosas={updateExitosas}
+                                            updateCanceladas={updateCanceladas} />
+                                    </li>
+                                    <li className="glide__slide">
+                                        <Exitosas citas={_Exitosas} />
+                                    </li>
+                                    <li className="glide__slide">
+                                        <Canceladas citas={_Canceladas} />
+                                    </li>
+                                </>
                             </ul>
                             <div className="glide__bullets header_nav" data-glide-el="controls[nav]">
                                 <button className="glide__bullet" data-glide-dir="=0">Agendadas</button>

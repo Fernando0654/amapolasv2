@@ -50,8 +50,8 @@ const AuthPage = () => {
         verifyIfItsNewUser(Email);
     }
 
-    const verifyIfItsNewUser = (email) => {
-        axios.get(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/user/` + email)
+    const verifyIfItsNewUser = async (email) => {
+        await axios(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/user/` + email)
             .then((res) => {
                 console.log(res);
             });

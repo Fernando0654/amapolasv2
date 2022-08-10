@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux'
 import { toast } from 'react-toastify'
 import { getCitaR, saveCitas } from '../store/actions/cita'
 
-export const Agendadas = ({ citas, updateAgendadas, updateExitosas, updateCanceladas }) => {
+export const Agendadas = ({ loading, citas, updateAgendadas, updateExitosas, updateCanceladas }) => {
 
     const [Citas, setCitas] = useState([]);
 
@@ -55,7 +55,13 @@ export const Agendadas = ({ citas, updateAgendadas, updateExitosas, updateCancel
     const _updateCanceladas = (data) => {
         updateCanceladas(data);
     }
- 
+
+    if (loading) {
+        return <div className="loading">
+            <h1>Cargando...</h1>
+        </div>
+    }
+
     return (
         <div className="container_list">
             {

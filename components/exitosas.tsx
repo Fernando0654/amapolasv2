@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiFillHeart } from 'react-icons/ai'
 import { FaRegSurprise } from 'react-icons/fa'
-import { MdDelete } from 'react-icons/md'
 
 export const Exitosas = ({ citas }) => {
 
+    const [_Exitosas, set_Exitosas] = useState([]);
+
+    useEffect(() => {
+        set_Exitosas(citas);
+    }, [citas])
+    
     return (
         <div className="container_list">
             {
-                citas.length === 0 ?
+                _Exitosas.length === 0 ?
                     <div className="no_information">
                         <h1>¡No hay citas exitosas!</h1>
                         <FaRegSurprise />
                     </div> :
-                    citas.map((cita: any, index: number) => (
+                    _Exitosas.map((cita: any, index: number) => (
                         <div className="badge_cita" key={index}>
                             <div className="info">
                                 <div className="datos">

@@ -17,8 +17,8 @@ const initAuth = () => {
       credential: {
         projectId: 'tunecloud-cfbb1',
         clientEmail: 'firebase-adminsdk-abw3w@tunecloud-cfbb1.iam.gserviceaccount.com',
-        privateKey: process.env.FIREBASE_PRIVATE_KEY ? JSON.parse(process.env.FIREBASE_PRIVATE_KEY) : undefined,
-        // privateKey: process.env.FIREBASE_PRIVATE_KEY || "",
+        // privateKey: process.env.FIREBASE_PRIVATE_KEY ? JSON.parse(process.env.FIREBASE_PRIVATE_KEY) : undefined,
+        privateKey: process.env.FIREBASE_PRIVATE_KEY || "",
       },
       databaseURL: ""
     },
