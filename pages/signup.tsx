@@ -13,6 +13,7 @@ import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Layout from "../components/layout";
 const SignUp = () => {
     const dispatch = useDispatch();
     const [Carga, setCarga] = useState(null);
@@ -73,17 +74,7 @@ const SignUp = () => {
             <Head>
                 <title>Amapolas | Registro</title>
             </Head>
-            <ToastContainer
-                position="bottom-center"
-                autoClose={2000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light" />
+            <Layout>
             <div className="login_container signup">
                 <form className="container" onSubmit={(e) => registerWithUserAndPassword(e)}>
                     <h1>Crea una cuenta</h1>
@@ -104,6 +95,7 @@ const SignUp = () => {
                     </button>
                 </form>
             </div>
+            </Layout>
         </>
     )
 }

@@ -11,6 +11,7 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import Layout from "../components/layout";
 
 const AuthPage = () => {
     const dispatch = useDispatch();
@@ -46,15 +47,16 @@ const AuthPage = () => {
             });
     }
 
-    const registerWithUserAndPassword = () => {
-        verifyIfItsNewUser(Email);
-    }
-
-    const verifyIfItsNewUser = async (email) => {
-        await axios(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/user/` + email)
-            .then((res) => {
-                console.log(res);
-            });
+    const loginWithUserAndPassword = () => {
+        axios.post(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/user/login`, {
+            correo: Email,
+            password: Password
+        }).then((res) => {
+            console.log(res)
+            toast.success(res.data.message)
+        }).catch((res) => {
+            toast.error(res.response.data.message)
+        })
     }
 
     return (
@@ -62,23 +64,25 @@ const AuthPage = () => {
             <Head>
                 <title>Amapola | Inicio de Sesión</title>
             </Head>
-            <div className="login_container">
-                <div className="container">
-                    <h1>Inicia sesión con tu cuenta</h1>
-                    <input type="text" placeholder="Email*" onChange={(e) => setEmail(e.target.value)} />
-                    <input type="password" placeholder="Contraseña*" onChange={(e) => setPassword(e.target.value)} />
-                    <div className="btn_container">
-                        <button onClick={() => registerWithUserAndPassword()}>Inicia sesión</button>
-                        <p>¿No tienes una cuenta? <Link href="/signup"><a>Regístrate</a></Link></p>
+            <Layout>
+                <div className="login_container">
+                    <div className="container">
+                        <h1>Inicia sesión con tu cuenta</h1>
+                        <input type="text" placeholder="Email*" onChange={(e) => setEmail(e.target.value)} />
+                        <input type="password" placeholder="Contraseña*" onChange={(e) => setPassword(e.target.value)} />
+                        <div className="btn_container">
+                            <button onClick={() => loginWithUserAndPassword()}>Inicia sesión</button>
+                            <p>¿No tienes una cuenta? <Link href="/signup"><a>Regístrate</a></Link></p>
+                        </div>
+                        <span>Ó</span>
+                        <button className="btn_pink" onClick={() => registerWithGoogle()}>
+                            <img src="/g_icon.png" alt="" />
+                            Continuar con Google
+                        </button>
+                        {IsNewUser ? <p className="error">Debes estar registrado para iniciar sesión</p> : null}
                     </div>
-                    <span>Ó</span>
-                    <button className="btn_pink" onClick={() => registerWithGoogle()}>
-                        <img src="/g_icon.png" alt="" />
-                        Continuar con Google
-                    </button>
-                    {IsNewUser ? <p className="error">Debes estar registrado para iniciar sesión</p> : null}
                 </div>
-            </div>
+            </Layout>
         </>
     )
 }
