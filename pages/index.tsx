@@ -78,7 +78,7 @@ const Home = () => {
 }
 
 export const getServerSideProps = withAuthUserTokenSSR({
-  appPageURL: "/",
+  appPageURL: "/home",
     whenAuthed: AuthAction.REDIRECT_TO_APP
 })((): any => {
   return {
@@ -87,6 +87,6 @@ export const getServerSideProps = withAuthUserTokenSSR({
 })
 
 export default withAuthUser({
-  appPageURL: "/",
+  appPageURL: "/home",
     whenAuthed: AuthAction.REDIRECT_TO_APP
 })(Home)

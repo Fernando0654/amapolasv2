@@ -84,21 +84,32 @@ const Services = () => {
         }
     }
 
+    const getCurrentDate = () => {
+        const date = new Date();
+        let mes: any = date.getMonth() + 1;
+        let dia: any = date.getDate();
+        let ano: any = date.getFullYear();
+        if (dia < 10) dia = '0' + dia;
+        if (mes < 10) mes = '0' + mes
+        console.log("dfsafsd")
+        return ano + "-" + mes + "-" + dia
+    }
+
     return (
         <>
             <Head>
                 <title>Amapola | Detalles del servicio</title>
             </Head>
             <Layout>
-                <div className="agendado_success" style={!Agendando && Success ? {display: "flex"} : {display: "none"}}>
+                <div className="agendado_success" style={!Agendando && Success ? { display: "flex" } : { display: "none" }}>
                     <div className="success_icon">
-                    <MdOutlineDone />
+                        <MdOutlineDone />
                     </div>
                     <h2>Agendado correctamente</h2>
                     <p>Gracias por confiar en Amapolas</p>
                     <button onClick={() => Router.push("/agenda")}>Finalizar</button>
                 </div>
-                <div className="screen_agendando" style={Agendando ? {display: "flex"} : {display: "none"}}>
+                <div className="screen_agendando" style={Agendando ? { display: "flex" } : { display: "none" }}>
                     <div className="agendando">
                         <div id="myBar" className="bar gray" style={{ width: "0%" }}></div>
                     </div>
@@ -122,7 +133,7 @@ const Services = () => {
                         <p>Selecciona la fecha y hora</p>
                         <div className="date_da">
                             <span>Fecha</span>
-                            <input type="date" name="date" onChange={(e) => Cita = { ...Cita, fecha: e.target.value }} />
+                            <input type="date" name="date" onChange={(e) => Cita = { ...Cita, fecha: e.target.value }} defaultValue={getCurrentDate()} />
                         </div>
                         <div className="date_da">
                             <span>Hora</span>
